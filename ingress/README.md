@@ -110,5 +110,4 @@ Commercial support is available at
 </html>
 
 
-![image](https://github.com/sourabhdey21/kubernetes/assets/98477908/f7a56e6a-6eb9-43b5-936a-541fbf5e1583)
 
