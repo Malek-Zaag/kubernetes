@@ -44,3 +44,5 @@ deployment.apps/ingress-nginx-controller   1/1     1            1           49m
 
 NAME                                                  DESIRED   CURRENT   READY   AGE
 replicaset.apps/ingress-nginx-controller-6dc8c8fdf4   1         1         1       49m
+
+
