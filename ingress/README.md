@@ -108,3 +108,6 @@ Commercial support is available at
 <p><em>Thank you for using nginx.</em></p>
 </body>
 </html>
+
+
+![image](https://github.com/sourabhdey21/kubernetes/assets/98477908/b546494d-1606-4b32-a3b9-86a74ce29392)
