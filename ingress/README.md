@@ -47,3 +47,64 @@ NAME                                                  DESIRED   CURRENT   READY 
 replicaset.apps/ingress-nginx-controller-6dc8c8fdf4   1         1         1       49m
 
 
+#Deploy application for ingress controller 
+kubectl  apply -f ingress/ingress-demo/
+
+# View the ingress resources
+kubectl  get ingress
+
+NAME                 CLASS   HOSTS               ADDRESS         PORTS   AGE
+ingress-resource-1   nginx   nginx.example.com   192.168.1.202   80      52m
+
+
+#Describe ingress resources
+kubectl describe ing ingress-resource-1
+
+Name:             ingress-resource-1
+Labels:           <none>
+Namespace:        default
+Address:          192.168.1.202
+Ingress Class:    nginx
+Default backend:  <default>
+Rules:
+  Host               Path  Backends
+  ----               ----  --------
+  nginx.example.com
+                     /   nginx-deploy-main:80 (10.42.0.15:80,10.42.0.16:80,10.42.0.17:80 + 1 more...)
+Annotations:         <none>
+Events:
+  Type    Reason  Age                From                      Message
+  ----    ------  ----               ----                      -------
+  Normal  Sync    52m (x2 over 52m)  nginx-ingress-controller  Scheduled for sync
+
+
+#Check if the container is accessible or not
+# Add entries in hosts file
+/etc/hosts
+192.168.1.202 nginx.example.com    --> put the controller loadbalancer Ipaddress
+
+curl nginx.example.com
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
