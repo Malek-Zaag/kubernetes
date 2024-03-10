@@ -83,7 +83,7 @@ Events:
 /etc/hosts
 192.168.1.202 nginx.example.com    --> put the controller loadbalancer Ipaddress
 
-curl nginx.example.com
+``` curl nginx.example.com ```
 
 <!DOCTYPE html>
 <html>
