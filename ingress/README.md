@@ -17,4 +17,5 @@ Your Ingress Controller is a powerful tool that simplifies and manages external 
 
 ```bash
 # Use your preferred package manager or deployment method
-kubectl apply -f your-ingress-controller.yaml
+git clone git@github.com:sourabhdey21/kubernetes.git
+kubectl  apply -f kubernetes/ingress/metallb/
