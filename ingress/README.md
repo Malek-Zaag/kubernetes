@@ -19,6 +19,7 @@ Your Ingress Controller is a powerful tool that simplifies and manages external 
 # Install Metallb loadbalancer
 git clone git@github.com:sourabhdey21/kubernetes.git
 kubectl  apply -f kubernetes/ingress/metallb/
+
 # The Output should be like these one if everything has been setup correctly
 kubectl  get pods -A
 
