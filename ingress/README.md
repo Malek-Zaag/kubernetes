@@ -24,3 +24,6 @@ kubectl  get pods -A
 
 metallb-system   controller-786f9df989-rttk5                     1/1     Running     0          50m
 metallb-system   speaker-zhx8s                                   1/1     Running     0          50m
+
+# Install Nginx ingress  Controller using helm/manifest
+helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace ingress-nginx --create-namespace
